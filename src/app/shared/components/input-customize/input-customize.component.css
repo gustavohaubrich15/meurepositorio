@@ -1,0 +1,15 @@
+.input-customize{
+    background-color: #323234;
+    height: 30px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    padding-left: 5px;
+    font-family: "Red Hat Display", serif;
+    outline: none;
+}
+
+
+.input-customize:active{
+    color:#827D7F;
+}

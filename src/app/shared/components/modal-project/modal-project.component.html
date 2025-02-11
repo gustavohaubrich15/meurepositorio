@@ -1,0 +1,34 @@
+<div class="modal-overlay" >
+    <div class="modal-container">
+      <h2>Adicionar projetos</h2>
+  
+      <div class="input-container">
+        <label>Título do projeto</label>
+        <app-input-customize #titleInput   [disabled]="isInputDisabled()" height="30px" width="300px" placeholder="Digite o nome do conteúdo" inputType="text"></app-input-customize>
+      </div>
+  
+      <div class="input-container">
+        <label>Descrição</label>
+        <app-input-customize #descriptionInput  [disabled]="isInputDisabled()" height="50px" width="300px" placeholder="Dê uma breve descrição do seu projeto" inputType="text"></app-input-customize>
+      </div>
+      <div class="input-container">
+        <label>Link</label>
+        <app-input-customize #linkInput  [disabled]="isInputDisabled()" height="30px" width="300px" placeholder="Link do projeto" inputType="text"></app-input-customize>
+      </div>
+
+      <div class="input-container">
+        <label>Imagem do Projeto (100x100)</label>
+        <input type="file" (change)="onFileSelected($event)" accept="image/*">
+        <div *ngIf="imagePreview">
+          <img [src]="imagePreview" alt="Pré-visualização" class="image-preview">
+        </div>
+      </div>
+      
+  
+      <div class="button-container">
+        <app-button-customize [backgroundColor]="backgroundColor()"  [disabled]="isInputDisabled()"  (click)="closeModal()"  [name]="buttonCloseName()"/>
+        <app-button-customize [disabled]="isInputDisabled()"  (click)="saveProject()"  [name]="buttonSaveName()"/>
+      </div>
+    </div>
+</div>
+  

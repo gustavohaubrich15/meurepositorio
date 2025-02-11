@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="content">
+        <div  class="dev-profile">
+            <app-card-dev [showEdit]="showEdit()" [imagedev]="userImage()" [name]="userName()" [description]="userDescription()" (editProfileButtonEvent)="editProfileButtonEvent()" (newSocialMediaButtonEvent)="newSocialMediaButtonEvent()" [showViewers]="showViewers()" [buttons]="buttonsUserSocialMedia()"></app-card-dev>
+        </div>
+        <div  class="works-list">
+           <h2>Projetos</h2>
+           <div class="item-list">
+                <div *ngFor="let project of userProject()">
+                    <app-item-project (deleteProjectEvent)="deleteProjectEvent($event)" [image]="project.image" [title]="project.title" [description]="project.description" [link]="project.link"></app-item-project>
+                </div>
+                <div class="addLink" (click)="addProjectkModal()">
+                    <div>Adicionar link</div>
+                    <div>+</div>
+                </div>
+           </div>
+        </div>
+    </div>
+    <app-modal-social-media  [linkedin]="userLinkedin()" [instagram]="userInstagram()" [facebook]="userFacebook()"  [github]="userGithub()"  (closeModalSocialMediaEvent)="closeModalSocialMediaEvent()" (saveSocialMediaButtonEvent)="saveSocialMediaButtonEvent($event)" *ngIf="showModalSocialMedia()"></app-modal-social-media> 
+    <app-modal-basic-info  [name]="userName()"  [description]="userDescription()"  (closeModalBasicInfoEvent)="closeModalBasicInfoEvent()" (saveBasicInfoButtonEvent)="saveBasicInfoButtonEvent($event)" *ngIf="showModalBasicInfo()" ></app-modal-basic-info>
+    <app-modal-project (saveProjectButtonEvent)="saveProjectButtonEvent($event)" *ngIf="showModalProject()"></app-modal-project>
+</div>

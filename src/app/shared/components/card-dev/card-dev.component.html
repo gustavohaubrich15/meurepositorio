@@ -1,0 +1,33 @@
+<div class="container-dev">
+    <div class="img-dev">
+        <img [src]="imagedev" alt="Logo">
+    </div>
+    <div class="info-dev">
+        <div class="title-dev">{{name}}<img style="cursor: pointer;" *ngIf="showEdit" (click)="editProfileButtonClicked()" height="20px" width="20px" src="assets/user_edit.svg" /></div>
+        <p class="description-dev">{{description}}</p>
+    </div>
+    <div class="links-dev">
+        <div>LINKS</div>
+        <div  class="link-buttons">
+            <div *ngFor="let button of buttons">
+                <a *ngIf="button.link" [href]="button.link" target="_blank" class="button">
+                    <div class="icon">
+                        <img height="20px" width="20px" [src]="button.icon" />
+                    </div>
+                </a>
+            </div>
+            <div *ngIf="showButtonPlus" class="button"> 
+                <div class="icon">
+                    <img (click)="plusButtonClicked()" height="20px" width="20px" src="assets/plus.svg" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <app-button-customize (click)="showProfile()" name="Confira meu template SaaS"/>
+        <div *ngIf="showViewers" class="viewers">
+            <div>Total de visitas</div>
+            <div class="size">12,453 <img height="24px" width="24px" src="assets/arrowup.svg" /></div>
+        </div>
+    </div>
+</div>

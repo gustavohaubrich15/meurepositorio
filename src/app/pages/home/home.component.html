@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="header">
+        <div class="header-name">
+            <img src="assets/logo.png" alt="Logo">
+            <div>Meu portifólio</div> 
+        </div>
+        <app-button-customize *ngIf="!isAuthenticated()" (click)="login()" name="Login"/>
+        <div class="name-login" *ngIf="isAuthenticated()">
+            <div> Bem vindo, {{ username() }}</div>
+            <app-button-customize (click)="logout()" name="Logout"/>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-info">
+            <div class="heading-large">Seus projetos e redes <br> sociais em um único link</div>
+            <div class="body-large">Crie sua própria página de projetos e compartilhe eles com o mundo.
+                Acompanhe o engajamento e divulgação do seu portifólio.</div>
+                <div class="create-new-site">
+                    <div>
+                        meuportifolio.com/profile/ 
+                    </div> 
+                    <app-input-customize   [disabled]="isInputDisabled()" height="30px" width="200px" placeholder="Seu link" inputType="text"></app-input-customize>
+                    <app-button-customize [disabled]="isInputDisabled()" (click)="saveLink()"  [name]="buttonLinkName()"/>
+                </div> 
+        </div>  
+        <div *ngIf="!isAuthenticated()" class="content-style">
+            <app-card-dev [showViewers]="showViewers()" [buttons]="buttons"></app-card-dev>
+        </div>
+        <div *ngIf="isAuthenticated()" class="gif">
+            <img  src="assets/gifdev.gif" alt="Carregando..." />
+        </div>
+    </div>
+</div>

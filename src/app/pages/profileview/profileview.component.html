@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="content">
+        <div class="dev-profile">
+            <app-card-dev [imagedev]="userData().photo" [name]="userData().name" [showButtonPlus]="showButtonPlus()"  [description]="userData().description" [showViewers]="showViewers()" [buttons]="buttonsUserSocialMedia()">
+            </app-card-dev>
+        </div>
+        <div class="works-list">
+            <h2>Projetos</h2>
+            <div class="item-list">
+                <div *ngFor="let project of userData().projects">
+                    <app-item-project
+                        [showButton] = "showButton()" 
+                        [image]="project.image" 
+                        [title]="project.title" 
+                        [description]="project.description" 
+                        [link]="project.link">
+                    </app-item-project>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    gap: 10px;
+    background-color: #29292E;
+    padding: 20px;
+    border-radius: 20px; 
+    width: 300px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.container:hover {
+    opacity: 0.8;
+}
+
+
+.image{
+    height: 92px;
+    width:96px;
+    object-fit: cover;
+    border-radius: 8px; 
+}
+
+.title{
+    font-weight: bold
+}
+
+.description{
+    font-weight: 300;
+    font-size: 14px;
+    color: #CDCBCC;
+}

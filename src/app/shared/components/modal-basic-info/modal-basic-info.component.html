@@ -1,0 +1,21 @@
+<div class="modal-overlay" >
+    <div class="modal-container">
+      <h2>Adicionar informações básicas</h2>
+  
+      <div class="input-container">
+        <label>Nome</label>
+        <app-input-customize #nameInput   [disabled]="isInputDisabled()" height="30px" width="200px" placeholder="Nome do desenvolvedor" inputType="text"></app-input-customize>
+      </div>
+  
+      <div class="input-container">
+        <label>Descrição</label>
+        <app-input-customize #descriptionInput [maxlength]="maxlength()" [disabled]="isInputDisabled()" height="30px" width="200px" placeholder="Descrição pessoal" inputType="text"></app-input-customize>
+      </div>
+  
+      <div class="button-container">
+        <app-button-customize [backgroundColor]="backgroundColor()"  [disabled]="isInputDisabled()"  (click)="closeModal()"  [name]="buttonCloseName()"/>
+        <app-button-customize [disabled]="isInputDisabled()"  (click)="saveBasicInfo()"  [name]="buttonSaveName()"/>
+      </div>
+    </div>
+</div>
+  

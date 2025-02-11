@@ -1,0 +1,32 @@
+<div class="modal-overlay" >
+    <div class="modal-container">
+      <h2>Adicionar redes sociais</h2>
+  
+      <div class="input-container">
+        <img src="assets/linkedin.svg" alt="LinkedIn" class="social-icon"/>
+        <app-input-customize #linkedinInput   [disabled]="isInputDisabled()" height="30px" width="200px" placeholder="Usuário LinkedIn" inputType="text"></app-input-customize>
+      </div>
+  
+      <div class="input-container">
+        <img src="assets/instagram.svg" alt="Instagram" class="social-icon"/>
+        <app-input-customize #instagramInput  [disabled]="isInputDisabled()" height="30px" width="200px" placeholder="Usuário Instagram" inputType="text"></app-input-customize>
+      </div>
+  
+      <div class="input-container">
+        <img src="assets/facebook.svg" alt="Facebook" class="social-icon"/>
+        <app-input-customize #facebookInput [disabled]="isInputDisabled()" height="30px" width="200px" placeholder="Usuário facebook" inputType="text"></app-input-customize>
+      </div>
+  
+      <div class="input-container">
+        <img src="assets/github.svg" alt="GitHub" class="social-icon"/>
+        <app-input-customize #githubInput [disabled]="isInputDisabled()" height="30px" width="200px" placeholder="Usuário GitHub" inputType="text"></app-input-customize>
+      </div>
+  
+      <div class="button-container">
+        <app-button-customize [backgroundColor]="backgroundColor()"  [disabled]="isInputDisabled()"  (click)="closeModal()"  [name]="buttonCloseName()"/>
+     
+        <app-button-customize [disabled]="isInputDisabled()"  (click)="saveSocialMedia()"  [name]="buttonSaveName()"/>
+      </div>
+    </div>
+</div>
+  

@@ -1,0 +1,12 @@
+<div class="container" (click)="clickItem()">
+    <div>
+        <img class="image" [src]="image"/>
+    </div>
+    <div class="info">
+        <div class="title">{{title}}</div>
+        <p class="description">{{description}}</p>
+        <div *ngIf="showButton">
+            <app-button-customize  [disabled]="isInputDisabled()"  (click)="deleteProject()"  [name]="buttonDeleteName()"/>
+        </div>
+    </div>
+</div>
