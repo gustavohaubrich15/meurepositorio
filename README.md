@@ -24,3 +24,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ![image](https://github.com/user-attachments/assets/42edb5fd-ac57-43a9-9492-2b894fa47b16)
 
+
+![image](https://github.com/user-attachments/assets/2cd43d86-5738-42bb-92c7-10ece1b48f47)
+
+
