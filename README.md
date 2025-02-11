@@ -18,3 +18,9 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - **RxJS**: Biblioteca para programação reativa, utilizada para gerenciar estados assíncronos e observáveis.
 - **TypeScript**: Superset de JavaScript para garantir uma melhor experiência de desenvolvimento com tipagem estática.
 - **HTML/CSS**: Estrutura e estilo do frontend.
+
+![image](https://github.com/user-attachments/assets/125dc85e-3233-491c-a8b4-991cfc549fbf)
+
+
+![image](https://github.com/user-attachments/assets/42edb5fd-ac57-43a9-9492-2b894fa47b16)
+
